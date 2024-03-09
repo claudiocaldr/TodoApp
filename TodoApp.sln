@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApp", "TodoApp\TodoApp.csproj", "{AA1AD711-B844-4181-98C4-A3092C5FD92E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{EF0D16A9-89A3-46A1-8777-960EE2A141E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA1AD711-B844-4181-98C4-A3092C5FD92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1AD711-B844-4181-98C4-A3092C5FD92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1AD711-B844-4181-98C4-A3092C5FD92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1AD711-B844-4181-98C4-A3092C5FD92E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF0D16A9-89A3-46A1-8777-960EE2A141E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF0D16A9-89A3-46A1-8777-960EE2A141E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF0D16A9-89A3-46A1-8777-960EE2A141E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF0D16A9-89A3-46A1-8777-960EE2A141E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {253E1C06-9BFB-4DB6-8C5D-FBCD9203C71E}
+	EndGlobalSection
+EndGlobal
