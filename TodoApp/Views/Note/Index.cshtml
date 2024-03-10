@@ -1,0 +1,31 @@
+﻿@model List<DataAccess.Models.Note>
+
+<div class="container">
+    <div class="float-end">
+        <a asp-action="Create" class="btn btn-dark">Create new note</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Commands</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var note in Model)
+            {
+                <tr>
+                    <td>@note.Id</td>
+                    <td>@note.Title</td>
+                    <td>@note.Description</td>
+                    <td>
+                        <a asp-route-id="@note.Id" asp-action="Edit" class="btn btn-dark">Edit</a>
+                        <a asp-route-id="@note.Id" asp-action="Delete" class="btn btn-dark">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

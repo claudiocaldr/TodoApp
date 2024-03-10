@@ -1,4 +1,4 @@
-namespace TodoApp.Models
+namespace DataAccess.Models
 {
     public class ErrorViewModel
     {
