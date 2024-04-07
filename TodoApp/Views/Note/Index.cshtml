@@ -1,5 +1,6 @@
-﻿@model List<DataAccess.Models.Note>
-@using DataAccess.Models;
+﻿@using TodoApp.Helpers;
+@using DataAccess;
+@model PaginatedList<Note>;
 
 <div class="container">
     <div class="float-lg-start">
@@ -36,4 +37,14 @@
             }
         </tbody>
     </table>
+    <div>
+        <a class="float-end" asp-action="Index"
+           asp-route-pageNumber="@(Model.PageIndex + 1)">
+            Next
+        </a>
+        <a class="float-end mx-1" asp-action="Index"
+           asp-route-pageNumber="@(Model.PageIndex - 1)">
+            Previous
+        </a>
+    </div>
 </div>
