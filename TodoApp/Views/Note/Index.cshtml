@@ -1,6 +1,14 @@
 ﻿@model List<DataAccess.Models.Note>
+@using DataAccess.Models;
 
 <div class="container">
+    <div class="float-lg-start">
+        <form class="form-control"  method="post">
+            <input type="text" name="name"/>
+            <button type="submit" class="btn btn-primary" asp-action="SearchByTitle">Search by title</button>
+            <button type="submit" class="btn btn-primary" asp-action="SearchByDescription">Search by description</button>
+        </form>  
+    </div>
     <div class="float-end">
         <a asp-action="Create" class="btn btn-dark">Create new note</a>
     </div>

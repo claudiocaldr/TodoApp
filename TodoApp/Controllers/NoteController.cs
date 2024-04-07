@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DataAccess.Models;
 using DataAccess;
+using TodoApp.Helpers;
 
 namespace TodoApp.Controllers
 {
@@ -13,8 +14,29 @@ namespace TodoApp.Controllers
         }
         public IActionResult Index()
         {
+            var data = TempDataExtensions.Get<List<Note>>(TempData, "notes");
+            if (data != null)
+            {
+                return View(data);
+            }
             List<Note> notes = this._db.Notes.OrderBy(x => x.Id).ToList();
             return View(notes);
+            
+        }
+        [HttpPost]
+        public IActionResult SearchByTitle(string name)
+        {
+            List<Note> notes = this._db.Notes.Where(n => n.Title.Contains(name)).ToList();
+            TempDataExtensions.Put(TempData, "notes", notes);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult SearchByDescription(string name)
+        {
+            List<Note> notes = this._db.Notes.Where(n => n.Description.Contains(name)).ToList();
+            TempDataExtensions.Put(TempData, "notes", notes);
+            return RedirectToAction("Index");
         }
 
         public IActionResult Create()
